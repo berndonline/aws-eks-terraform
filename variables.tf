@@ -1,4 +1,4 @@
 variable "cluster-name" {
-  default = "aws-eks-terraform"
+  default = "eks-cluster"
   type    = "string"
 }
