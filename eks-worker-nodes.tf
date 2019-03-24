@@ -84,7 +84,7 @@ data "aws_ami" "eks-worker" {
 }
 
 locals {
-  demo-node-userdata = <<USERDATA
+  eks-node-userdata = <<USERDATA
 #!/bin/bash
 set -o xtrace
 /etc/eks/bootstrap.sh --apiserver-endpoint '${aws_eks_cluster.eks.endpoint}' --b64-cluster-ca '${aws_eks_cluster.eks.certificate_authority.0.data}' '${var.cluster-name}'
