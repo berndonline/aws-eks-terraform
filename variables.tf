@@ -1,4 +1,4 @@
 variable "cluster-name" {
-  default = "eks-cluster2"
+  default = "eks-cluster"
   type    = "string"
 }
