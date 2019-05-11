@@ -115,9 +115,9 @@ resource "aws_launch_configuration" "eks" {
 }
 
 resource "aws_autoscaling_group" "eks" {
-  desired_capacity     = 8
+  desired_capacity     = 10
   launch_configuration = "${aws_launch_configuration.eks.id}"
-  max_size             = 8
+  max_size             = 10
   min_size             = 1
   name                 = "eks"
   vpc_zone_identifier  = ["${aws_subnet.eks.*.id}"]
